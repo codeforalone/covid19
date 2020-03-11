@@ -10,7 +10,7 @@
       </v-icon>
       <nuxt-link to="/" class="SideNavigation-HeadingLink">
         <div class="SideNavigation-Logo">
-          <img src="/logo.svg" :alt="$t('Tokyo')" />
+          <img src="/logo.png" :alt="$t('Aichi')" />
         </div>
         <h1 class="SideNavigation-Heading">
           {{ $t('COVID-19') }}<br />{{ $t('Measures site') }}
@@ -39,34 +39,48 @@
       </v-list>
       <div class="SideNavigation-Footer">
         <div class="SideNavigation-SocialLinkContainer">
+<!--
           <a
-            href="https://line.me/R/ti/p/%40822sysfc"
+            href="https://line.me/R/ti/p/%XXXXXXXXXXX"
             target="_blank"
             rel="noopener"
           >
             <img src="/line.png" alt="LINE" />
           </a>
           <a
-            href="https://twitter.com/tokyo_bousai"
+            href="https://twitter.com/XXXXXXXXXXX"
             target="_blank"
             rel="noopener"
           >
             <img src="/twitter.png" alt="Twitter" />
           </a>
           <a
-            href="https://www.facebook.com/tochokoho"
+            href="https://www.facebook.com/XXXXXXXXXXX"
             target="_blank"
             rel="noopener"
           >
             <img src="/facebook.png" alt="Facebook" />
           </a>
-          <a href="https://github.com/tokyo-metropolitan-gov/covid19">
+-->
+          <a href="https://github.com/codeforalone/covid19">
             <img src="/github.png" alt="GitHub" />
           </a>
         </div>
         <small class="SideNavigation-Copyright" lang="en">
+<<<<<<< HEAD
           Copyright &copy; 2020 Tokyo Metropolitan Government. All Rights
           Reserved.
+=======
+          Content on This Site is Licensed Under a
+          <a
+            rel="license"
+            target="_blank"
+            href="http://creativecommons.org/licenses/by/4.0/"
+          >
+            Creative Commons Attribution 4.0 International License </a
+          ><br />
+          2020 codeforalone
+>>>>>>> development
         </small>
       </div>
     </div>
@@ -78,20 +92,20 @@
   "ja": {
     "Navi Open": "サイドメニュー項目を開く",
     "Navi Close": "サイドメニュー項目を閉じる",
-    "Tokyo": "東京都",
+    "Aichi": "愛知県(非公式)",
     "COVID-19": "新型コロナウイルス感染症",
-    "Measures site": "対策サイト",
-    "Tokyo Metropolitan Government": "東京都",
-    "Tokyo COVID-19 Task Force": "新型コロナウイルス感染症対策本部",
-    "The latest updates": "都内の最新感染動向",
+    "Measures site": "対策まとめサイト",
+    "Aichi Metropolitan Government": "愛知県(非公式)",
+    "Aichi COVID-19 Task Force": "新型コロナウイルス感染症対策本部",
+    "The latest updates": "愛知県内の最新感染動向",
     "If you have any symptoms": "新型コロナウイルス感染症が心配なときに",
     "for Families with children": "お子様をお持ちの皆様へ",
-    "for Citizens": "都民の皆様へ",
+    "for Citizens": "愛知県民の皆様へ",
     "for Enterprises and Employees": "企業の皆様・はたらく皆様へ",
-    "Official statements from Task Force": "東京都新型コロナウイルス感染症対策本部報",
-    "Cancelled public events": "東京都主催等 中止又は延期するイベント等",
-    "Government official website": "東京都公式ホームページ",
-    "Message from Governor Koike": "知事からのメッセージ",
+    "Official statements from Task Force": "愛知県新型コロナウイルス感染症対策本部会議資料",
+    "Cancelled public events": "愛知県主催等 中止又は延期するイベント等",
+    "Government official website": "愛知県公式ホームページ",
+    "Message from Governor": "知事からのメッセージ",
     "About us": "当サイトについて"
   }
 }
@@ -121,39 +135,44 @@ export default {
         {
           icon: 'covid',
           title: this.$t('If you have any symptoms'),
-          link: '/flow',
+          link: 'https://www.pref.aichi.jp/soshiki/kenkotaisaku/novel-coronavirus.html#soudan',
           divider: true
         },
+/*
         {
           icon: 'parent',
           title: this.$t('for Families with children'),
           link: '/parent'
         },
+*/
         {
           icon: 'mdi-account-multiple',
           title: this.$t('for Citizens'),
-          link: 'https://www.metro.tokyo.lg.jp/tosei/tosei/news/2019-ncov.html'
+          link: 'https://www.pref.aichi.jp//soshiki/kenkotaisaku/novel-coronavirus.html',
+          divider: true
         },
+/*
         {
           icon: 'mdi-domain',
           title: this.$t('for Enterprises and Employees'),
           link: '/worker',
           divider: true
         },
+*/
         {
           title: this.$t('Official statements from Task Force'),
           link:
-            'https://www.bousai.metro.tokyo.lg.jp/taisaku/saigai/1007261/index.html'
+            'https://www.pref.aichi.jp/soshiki/kenkotaisaku/novel-coronavirus-taisakuhonbu.html'
         },
         {
           title: this.$t('Cancelled public events'),
           link:
-            'https://www.seisakukikaku.metro.tokyo.lg.jp/information/event02.html'
+            'https://www.pref.aichi.jp/soshiki/master/eventinfo-corona.html'
         },
         {
-          title: this.$t('Message from Governor Koike'),
+          title: this.$t('Message from Governor'),
           link:
-            'https://www.metro.tokyo.lg.jp/tosei/governor/governor/katsudo/2020/03/03_00.html'
+            'https://www.pref.aichi.jp/chiji/message/index00.html'
         },
         {
           title: this.$t('About us'),
@@ -161,7 +180,7 @@ export default {
         },
         {
           title: this.$t('Government official website'),
-          link: 'https://www.metro.tokyo.lg.jp/',
+          link: 'https://www.pref.aichi.jp/',
           divider: true
         }
       ]
@@ -268,6 +287,8 @@ export default {
     width: 100%;
     z-index: z-index-of(opened-side-navigation);
     background-color: $white;
+    height: 100%;
+    overflow-y: scroll;
   }
 }
 @include largerThan($small) {
