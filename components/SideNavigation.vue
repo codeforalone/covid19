@@ -67,10 +67,6 @@
           </a>
         </div>
         <small class="SideNavigation-Copyright" lang="en">
-<<<<<<< HEAD
-          Copyright &copy; 2020 Tokyo Metropolitan Government. All Rights
-          Reserved.
-=======
           Content on This Site is Licensed Under a
           <a
             rel="license"
@@ -80,7 +76,6 @@
             Creative Commons Attribution 4.0 International License </a
           ><br />
           2020 codeforalone
->>>>>>> development
         </small>
       </div>
     </div>
