@@ -6,13 +6,16 @@
       :date="headerItem.date"
     />
     <whats-new class="mb-4" :items="newsItems" />
+<!--
     <static-info
       class="mb-4"
       :url="'/flow'"
       :text="'自分や家族の症状に不安や心配があればまずは電話相談をどうぞ'"
       :btn-text="'相談の手順を見る'"
     />
+-->
     <v-row class="DataBlock">
+<!--
       <v-col cols="12" md="6" class="DataCard">
         <svg-card
           title="検査陽性者の状況"
@@ -22,6 +25,7 @@
           <confirmed-cases-table v-bind="confirmedCases" />
         </svg-card>
       </v-col>
+-->
       <v-col cols="12" md="6" class="DataCard">
         <time-bar-chart
           title="陽性患者数"
@@ -31,7 +35,7 @@
           :date="Data.patients.date"
           :unit="'人'"
           :url="
-            'https://catalog.data.metro.tokyo.lg.jp/dataset/t000010d0000000068'
+            'https://www.pref.aichi.jp//soshiki/kenkotaisaku/novel-coronavirus.html'
           "
         />
       </v-col>
@@ -44,10 +48,11 @@
           :date="Data.patients.date"
           :info="sumInfoOfPatients"
           :url="
-            'https://catalog.data.metro.tokyo.lg.jp/dataset/t000010d0000000068'
+            'https://www.pref.aichi.jp//soshiki/kenkotaisaku/novel-coronavirus.html'
           "
         />
       </v-col>
+<!--
       <v-col cols="12" md="6" class="DataCard">
         <time-stacked-bar-chart
           title="検査実施数"
@@ -92,6 +97,7 @@
           :date="metroGraph.date"
         />
       </v-col>
+-->
     </v-row>
   </div>
 </template>
@@ -141,11 +147,11 @@ export default {
     const metroGraph = MetroData
     // 検査実施日別状況
     const inspectionsGraph = [
-      Data.inspections_summary.data['都内'],
+      Data.inspections_summary.data['愛知県内'],
       Data.inspections_summary.data['その他']
     ]
     const inspectionsItems = [
-      '都内発生（疑い例・接触者調査）',
+      '愛知県内発生（疑い例・接触者調査）',
       'その他（チャーター便・クルーズ船）'
     ]
     const inspectionsLabels = Data.inspections_summary.labels
@@ -180,7 +186,7 @@ export default {
       sumInfoOfPatients,
       headerItem: {
         icon: 'mdi-chart-timeline-variant',
-        title: '都内の最新感染動向',
+        title: '愛知県内の最新感染動向',
         date: Data.lastUpdate
       },
       newsItems: News.newsItems,
@@ -242,7 +248,7 @@ export default {
   },
   head() {
     return {
-      title: '都内の最新感染動向'
+      title: '愛知県内の最新感染動向'
     }
   }
 }

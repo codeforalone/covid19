@@ -1,14 +1,44 @@
 {
-  "newsItems": [
-    {
-      "date": "2020/03/09",
-      "url": "https://www.bousai.metro.tokyo.lg.jp/taisaku/saigai/1007261/1007462.html",
-      "text": "都の備蓄マスク20万枚を都内全区市町村へ提供"
-    },
-    {
-      "date": "2020/03/09",
-      "url": "https://www.fukushihoken.metro.tokyo.lg.jp/oshirase/iryo/maskhaifu0306.html",
-      "text": "都内医療機関及び保健所等へのマスクの配布について"
-    }
-  ]
+    "newsItems": [
+        {
+            "date": "2020/03/11",
+            "url": "https://www.pref.aichi.jp/soshiki/kenkotaisaku/pressrelease-ncovkensa200311.html",
+            "text": "新型コロナウイルスの遺伝子検査件数について"
+        },
+        {
+            "date": "2020/03/11",
+            "url": "https://www.pref.aichi.jp/soshiki/koho/20200311.html",
+            "text": "愛知県内の新型コロナウイルス感染症の現状についての知事記者会見動画を配信しました"
+        },
+        {
+            "date": "2020/03/10",
+            "url": "https://www.pref.aichi.jp/soshiki/kenkotaisaku/pressrelease-ncov200310.html",
+            "text": "新型コロナウイルス感染症患者の発生について"
+        },
+        {
+            "date": "2020/03/10",
+            "url": "https://www.pref.aichi.jp/soshiki/kigyo-suiji/0000010193.html",
+            "text": "新型コロナウイルス感染症の対策として、水の生活館を臨時休館します"
+        },
+        {
+            "date": "2020/03/10",
+            "url": "https://www.pref.aichi.jp/soshiki/kenkotaisaku/novel-coronavirus.html",
+            "text": "新型コロナウイルス感染症について"
+        },
+        {
+            "date": "2020/03/10",
+            "url": "https://www.pref.aichi.jp/soshiki/rodofukushi/telework.html",
+            "text": "【県内企業の皆様へ】【2020年3月10日情報更新　厚生労働省助成金受付開始！】新型コロナウイルス感染症対策として「テレワーク」の活用をご検討ください！"
+        },
+        {
+            "date": "2020/03/11",
+            "url": "https://www.pref.aichi.jp/soshiki/kenkotaisaku/pressrelease-ncovkensa200311.html",
+            "text": "新型コロナウイルスの遺伝子検査件数について"
+        },
+        {
+            "date": "2020/03/10",
+            "url": "https://www.pref.aichi.jp/soshiki/kenkotaisaku/pressrelease-ncov200310.html",
+            "text": "新型コロナウイルス感染症患者の発生について"
+        }
+    ]
 }
