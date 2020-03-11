@@ -1,22 +1,26 @@
-# 東京都 新型コロナウイルス感染症対策サイト
+# 愛知県(非公式) 新型コロナウイルス感染症対策まとめサイト
+
+愛知県もやりましょう
+取り急ぎ作りました。
+
+## 東京都 新型コロナウイルス感染症対策サイト
 
 ![](https://github.com/tokyo-metropolitan-gov/covid19/workflows/production%20deploy/badge.svg)
 
-[![東京都 新型コロナウイルス感染症対策サイト](https://user-images.githubusercontent.com/1301149/75629392-1d19d900-5c25-11ea-843d-2d4376e3a560.png)](https://stopcovid19.metro.tokyo.lg.jp/)
-
-### 日本語 | [English](./README_EN.md) | [Spanish](./README_ES.md) | [Korean](./README_KO.md) | [Chinese (Taiwan)](./README_ZH_TW.md) | [Chinese (Simplified)](./README_ZH_CN.md) | [Vietnamese](./README_VI.md)
-
-## 貢献の仕方
-Issues にあるいろいろな修正にご協力いただけると嬉しいです。
-
-詳しくは[貢献の仕方](./.github/CONTRIBUTING.md)を御覧ください。
-
-
+<<<<<<< HEAD
 ## 行動原則
 詳しくは[サイト構築にあたっての行動原則](./.github/CODE_OF_CONDUCT.md)を御覧ください。
 
 ## ライセンス
 本ソフトウェアは、[MITライセンス](./LICENSE.txt)の元提供されています。
+=======
+[![東京都 新型コロナウイルス感染症対策サイト](https://user-images.githubusercontent.com/1301149/75629392-1d19d900-5c25-11ea-843d-2d4376e3a560.png)](https://stopcovid19.metro.tokyo.lg.jp/)
+
+### 【北海道版】新型コロナウイルス感染症対策サイト
+[サイトへのリンク](https://stopcovid19.hokkaido.dev/)
+
+[GitHubへのリンク](https://github.com/codeforsapporo/covid19)
+>>>>>>> development
 
 ## 開発者向け情報
 
@@ -55,6 +59,6 @@ $ docker-compose run --rm app yarn install
 
 `master` ブランチがアップデートされると、自動的に `production` ブランチにHTML類がbuildされます。そして、本番サイト https://stopcovid19.metro.tokyo.lg.jp/ が更新されます。
 
-`staging` ブランチがアップデートされると、自動的に `gh-pages` ブランチにHTML類がbuildされます。そして、ステージングサイト https://stg-covid19-tokyo.netlify.com/ が更新されます。
+`staging` ブランチがアップデートされると、自動的に `gh-pages` ブランチにHTML類がbuildされます。そして、ステージングサイト https://stg-covid19-aichi-unoffical.netlify.com/ が更新されます。
 
-`development` ブランチがアップデートされると、自動的に `dev-pages` ブランチにHTML類がbuildされます。そして、開発用サイト https://dev-covid19-tokyo.netlify.com/ が更新されます。
+`development` ブランチがアップデートされると、自動的に `dev-pages` ブランチにHTML類がbuildされます。そして、開発用サイト https://dev-covid19-aichi-unoffical.netlify.com/が更新されます。

@@ -33,7 +33,7 @@
           target="_blank"
           rel="noopener"
         >
-          オープンデータへのリンク
+          出典: 愛知県 新型コロナウイルス感染症について
           <v-icon class="ExternalLinkIcon" size="15">
             mdi-open-in-new
           </v-icon>
