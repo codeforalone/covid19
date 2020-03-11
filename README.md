@@ -54,8 +54,16 @@ $ docker-compose run --rm app yarn install
 
 ### ステージング・本番環境への反映
 
-`master` ブランチがアップデートされると、自動的に `production` ブランチにHTML類がbuildされます。そして、本番サイト https://covid19-aichi-unoffical.netlify.com/ が更新されます。
+`master` ブランチがアップデートされると、自動的に `production` ブランチにHTML類がbuildされます。そして、本番サイト http://stopcovid19.aichi-info.net/ が更新されます。
 
 `staging` ブランチがアップデートされると、自動的に `gh-pages` ブランチにHTML類がbuildされます。そして、ステージングサイト https://stg-covid19-aichi-unoffical.netlify.com/ が更新されます。
 
 `development` ブランチがアップデートされると、自動的に `dev-pages` ブランチにHTML類がbuildされます。そして、開発用サイト https://dev-covid19-aichi-unoffical.netlify.com/が更新されます。
+
+
+### 非公式愛知県版について
+
+- 愛知県の公式版がリリースされた場合は紛らわしくなるので本サイトは終了する
+- サイト構成などは東京版の構成から大きく変えないようにする
+- データは愛知県の公式サイトからスクレイピングによって収集したものを整形して利用する
+- Webホスティング環境は東京都同様netlifyを使用しています

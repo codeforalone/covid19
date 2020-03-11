@@ -47,13 +47,15 @@
           >
             <img src="/line.png" alt="LINE" />
           </a>
+-->
           <a
-            href="https://twitter.com/XXXXXXXXXXX"
+            href="https://twitter.com/codeforalone"
             target="_blank"
             rel="noopener"
           >
             <img src="/twitter.png" alt="Twitter" />
           </a>
+<!--
           <a
             href="https://www.facebook.com/XXXXXXXXXXX"
             target="_blank"
