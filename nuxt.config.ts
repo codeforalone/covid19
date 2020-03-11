@@ -30,7 +30,7 @@ const config: Configuration = {
       {
         hid: 'og:url',
         property: 'og:url',
-        content: 'https://stopcovid19.metro.tokyo.lg.jp'
+        content: 'https://stopcovid19.aichi-info.net/'
       },
       {
         hid: 'og:title',
@@ -46,7 +46,7 @@ const config: Configuration = {
       {
         hid: 'og:image',
         property: 'og:image',
-        content: 'https://stopcovid19.metro.tokyo.lg.jp/ogp.png'
+        content: 'https://stopcovid19.aichi-info.net/ogp.png'
       },
       {
         hid: 'twitter:card',
@@ -56,7 +56,7 @@ const config: Configuration = {
       {
         hid: 'twitter:site',
         name: 'twitter:site',
-        content: '@XXXXXXXX'
+        content: '@codeforalone'
       },
       {
         hid: 'twitter:creator',
@@ -66,7 +66,7 @@ const config: Configuration = {
       {
         hid: 'twitter:image',
         name: 'twitter:image',
-        content: 'https://stopcovid19.metro.tokyo.lg.jp/ogp.png'
+        content: 'https://stopcovid19.aichi-info.net/ogp.png'
       }
     ],
     link: [
@@ -150,7 +150,7 @@ const config: Configuration = {
     }
   },
   googleAnalytics: {
-    id: 'UA-XXXXXXXXXX-1'
+    id: 'UA-160313495-1'
   },
   build: {
     postcss: {
