@@ -3,11 +3,14 @@
 愛知県もやりましょう
 取り急ぎ作りました。
 
-## 東京都 新型コロナウイルス感染症対策サイト
+## 各新型コロナウイルス感染対策サイト
+
+### 東京都 新型コロナウイルス感染症対策サイト (オリジナル)
 
 [![東京都 新型コロナウイルス感染症対策サイト](https://user-images.githubusercontent.com/1301149/75629392-1d19d900-5c25-11ea-843d-2d4376e3a560.png)](https://stopcovid19.metro.tokyo.lg.jp/)
 
 ### 【北海道版】新型コロナウイルス感染症対策サイト
+
 [サイトへのリンク](https://stopcovid19.hokkaido.dev/)
 
 [GitHubへのリンク](https://github.com/codeforsapporo/covid19)
@@ -19,6 +22,7 @@
 - 必要となるNode.jsのバージョン: 10.19.0以上
 
 **yarn を使う場合**
+
 ``` bash
 # install dependencies
 $ yarn install
@@ -28,6 +32,7 @@ $ yarn dev
 ```
 
 **docker compose を使う場合**
+
 ```bash
 # serve with hot reload at localhost:3000
 $ docker-compose up --build
@@ -36,11 +41,13 @@ $ docker-compose up --build
 ### `Cannot find module ****` と怒られた時
 
 **yarn を使う場合**
-```
+
+```bash
 $ yarn install
 ```
 
 **docker compose を使う場合**
+
 ```bash
 $ docker-compose run --rm app yarn install
 ```
