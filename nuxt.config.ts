@@ -61,7 +61,7 @@ const config: Configuration = {
       {
         hid: 'twitter:creator',
         name: 'twitter:creator',
-        content: '@XXXXXXXX'
+        content: '@codeforalone'
       },
       {
         hid: 'twitter:image',
