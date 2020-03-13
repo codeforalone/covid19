@@ -1,39 +1,84 @@
 {
     "newsItems": [
         {
-            "date": "2020/03/11",
-            "url": "https://www.pref.aichi.jp/soshiki/kenkotaisaku/pressrelease-ncovkensa200311.html",
-            "text": "新型コロナウイルスの遺伝子検査件数について"
+            "date": "2020/03/13",
+            "url": "https://www.pref.aichi.jp/soshiki/kinyu/kinyu0313.html",
+            "text": "新型コロナウイルス感染症の影響を受けている中小企業者に対する金融支援（危機関連保証及びセーフティネット保証5号業種追加指定）について"
         },
         {
-            "date": "2020/03/11",
+            "date": "2020/03/13",
+            "url": "https://www.pref.aichi.jp/site/covid19-aichi/kaiyoh.html",
+            "text": "新型コロナウイルス感染症の拡大防止に係る豊田自動織機海陽ヨットハーバーの一部利用制限について"
+        },
+        {
+            "date": "2020/03/12",
+            "url": "https://www.pref.aichi.jp/soshiki/kenkotaisaku/pressrelease-ncov200312.html",
+            "text": "新型コロナウイルス感染症患者の発生について"
+        },
+        {
+            "date": "2020/03/12",
             "url": "https://www.pref.aichi.jp/soshiki/kenkotaisaku/novel-coronavirus.html",
             "text": "新型コロナウイルス感染症について"
         },
         {
-            "date": "2020/03/11",
-            "url": "https://www.pref.aichi.jp/soshiki/koho/20200311.html",
-            "text": "愛知県内の新型コロナウイルス感染症の現状についての知事記者会見動画を配信しました"
+            "date": "2020/03/12",
+            "url": "https://www.pref.aichi.jp/site/covid19-aichi/syakaikatsudo0306.html",
+            "text": "【変更】新型コロナウイルス感染症の拡大防止に係る「あいちNPO交流プラザ」の一部利用中止について"
         },
         {
-            "date": "2020/03/10",
-            "url": "https://www.pref.aichi.jp/soshiki/kenkotaisaku/pressrelease-ncov200310.html",
-            "text": "新型コロナウイルス感染症患者の発生について"
+            "date": "2020/03/12",
+            "url": "https://www.pref.aichi.jp/site/covid19-aichi/rinjikyuukan.html",
+            "text": "新型コロナウイルス感染症の拡大防止に係る県営都市公園施設の臨時休館・休業について"
         },
         {
-            "date": "2020/03/10",
-            "url": "https://www.pref.aichi.jp/soshiki/kigyo-suiji/0000010193.html",
-            "text": "新型コロナウイルス感染症の対策として、水の生活館を臨時休館します"
+            "date": "2020/03/12",
+            "url": "https://www.pref.aichi.jp/site/covid19-aichi/bunka0312.html",
+            "text": "新型コロナウイルス感染症の拡大防止に係る愛知芸術文化センターアートライブラリー及び愛知県図書館の休館延長について"
+        },
+        {
+            "date": "2020/03/12",
+            "url": "https://www.pref.aichi.jp/soshiki/kankyokatsudo/kyukan01.html",
+            "text": "新型コロナウイルス感染症の拡大防止に係る「もりの学舎（まなびや）」及び「弥富野鳥園」の屋内施設の臨時休館について"
+        },
+        {
+            "date": "2020/03/12",
+            "url": "https://www.pref.aichi.jp/soshiki/sports/encho-kentai-spokan-budokan-korogi.html",
+            "text": "【一部利用制限延長】新型コロナウイルス感染症の拡大防止に係る愛知県スポーツ局所管施設の一部利用制限について"
+        },
+        {
+            "date": "2020/03/12",
+            "url": "https://www.pref.aichi.jp/site/covid19-aichi/rinnjikyuukan.html",
+            "text": "（休館期間延長）新型コロナウイルス感染症の拡大防止のため、あいち航空ミュージアムを臨時休館します"
+        },
+        {
+            "date": "2020/03/12",
+            "url": "https://www.pref.aichi.jp/site/covid19-aichi/kagakukann-korona.html",
+            "text": "新型コロナウィルス感染症の拡大防止のため、メタウォーター下水道科学館下水道を臨時休館します"
+        },
+        {
+            "date": "2020/03/12",
+            "url": "https://www.pref.aichi.jp/soshiki/kosodate/kodomonokunikorona.html",
+            "text": "新型コロナウイルス感染症の拡大防止に係る愛知こどもの国及び海南こどもの国の屋内施設の臨時休館について"
+        },
+        {
+            "date": "2020/03/12",
+            "url": "https://www.pref.aichi.jp/soshiki/kosodate/aitikennzidousougousennta.html",
+            "text": "新型コロナウイルス感染症の拡大防止に係る愛知県児童総合センターの臨時休館について"
+        },
+        {
+            "date": "2020/03/12",
+            "url": "https://www.pref.aichi.jp/soshiki/shobohoan/kyuukannenntyou-bousaikyouiku.html",
+            "text": "（休館期間延長）新型コロナウイルス感染症の拡大防止に係る防災教育センターの臨時休館について"
+        },
+        {
+            "date": "2020/03/12",
+            "url": "https://www.pref.aichi.jp/soshiki/kenkotaisaku/aichikenkounomorikenkoukagakusougousenta-itibukyuukan.html",
+            "text": "【休館延長】新型コロナウイルス感染症の拡大防止に係るあいち健康の森健康科学総合センターの一部休館について"
         },
         {
             "date": "2020/03/11",
             "url": "https://www.pref.aichi.jp/soshiki/kenkotaisaku/pressrelease-ncovkensa200311.html",
             "text": "新型コロナウイルスの遺伝子検査件数について"
-        },
-        {
-            "date": "2020/03/10",
-            "url": "https://www.pref.aichi.jp/soshiki/kenkotaisaku/pressrelease-ncov200310.html",
-            "text": "新型コロナウイルス感染症患者の発生について"
         }
     ]
 }
