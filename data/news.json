@@ -2,8 +2,18 @@
     "newsItems": [
         {
             "date": "2020/03/13",
+            "url": "https://www.pref.aichi.jp/soshiki/kenkotaisaku/novel-coronavirus.html",
+            "text": "新型コロナウイルス感染症について"
+        },
+        {
+            "date": "2020/03/13",
             "url": "https://www.pref.aichi.jp/soshiki/kinyu/kinyu0313.html",
             "text": "新型コロナウイルス感染症の影響を受けている中小企業者に対する金融支援（危機関連保証及びセーフティネット保証5号業種追加指定）について"
+        },
+        {
+            "date": "2020/03/13",
+            "url": "https://www.pref.aichi.jp/site/covid19-aichi/nougyoukinyu.html",
+            "text": "新型コロナウィルス感染症で影響を受けた農業者向け農業制度資金"
         },
         {
             "date": "2020/03/13",
@@ -14,11 +24,6 @@
             "date": "2020/03/12",
             "url": "https://www.pref.aichi.jp/soshiki/kenkotaisaku/pressrelease-ncov200312.html",
             "text": "新型コロナウイルス感染症患者の発生について"
-        },
-        {
-            "date": "2020/03/12",
-            "url": "https://www.pref.aichi.jp/soshiki/kenkotaisaku/novel-coronavirus.html",
-            "text": "新型コロナウイルス感染症について"
         },
         {
             "date": "2020/03/12",
@@ -47,6 +52,16 @@
         },
         {
             "date": "2020/03/12",
+            "url": "https://www.pref.aichi.jp/soshiki/shobohoan/kyuukannenntyou-bousaikyouiku.html",
+            "text": "（休館期間延長）新型コロナウイルス感染症の拡大防止に係る防災教育センターの臨時休館について"
+        },
+        {
+            "date": "2020/03/12",
+            "url": "https://www.pref.aichi.jp/soshiki/kenkotaisaku/aichikenkounomorikenkoukagakusougousenta-itibukyuukan.html",
+            "text": "【休館延長】新型コロナウイルス感染症の拡大防止に係るあいち健康の森健康科学総合センターの一部休館について"
+        },
+        {
+            "date": "2020/03/12",
             "url": "https://www.pref.aichi.jp/site/covid19-aichi/rinnjikyuukan.html",
             "text": "（休館期間延長）新型コロナウイルス感染症の拡大防止のため、あいち航空ミュージアムを臨時休館します"
         },
@@ -64,16 +79,6 @@
             "date": "2020/03/12",
             "url": "https://www.pref.aichi.jp/soshiki/kosodate/aitikennzidousougousennta.html",
             "text": "新型コロナウイルス感染症の拡大防止に係る愛知県児童総合センターの臨時休館について"
-        },
-        {
-            "date": "2020/03/12",
-            "url": "https://www.pref.aichi.jp/soshiki/shobohoan/kyuukannenntyou-bousaikyouiku.html",
-            "text": "（休館期間延長）新型コロナウイルス感染症の拡大防止に係る防災教育センターの臨時休館について"
-        },
-        {
-            "date": "2020/03/12",
-            "url": "https://www.pref.aichi.jp/soshiki/kenkotaisaku/aichikenkounomorikenkoukagakusougousenta-itibukyuukan.html",
-            "text": "【休館延長】新型コロナウイルス感染症の拡大防止に係るあいち健康の森健康科学総合センターの一部休館について"
         },
         {
             "date": "2020/03/11",
