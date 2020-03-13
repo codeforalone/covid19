@@ -2,6 +2,11 @@
     "newsItems": [
         {
             "date": "2020/03/13",
+            "url": "https://www.pref.aichi.jp/site/covid19-aichi/pressrelease-ncov200313.html",
+            "text": "新型コロナウイルス感染症患者の発生について"
+        },
+        {
+            "date": "2020/03/13",
             "url": "https://www.pref.aichi.jp/soshiki/kenkotaisaku/novel-coronavirus.html",
             "text": "新型コロナウイルス感染症について"
         },
@@ -47,13 +52,13 @@
         },
         {
             "date": "2020/03/12",
-            "url": "https://www.pref.aichi.jp/soshiki/sports/encho-kentai-spokan-budokan-korogi.html",
-            "text": "【一部利用制限延長】新型コロナウイルス感染症の拡大防止に係る愛知県スポーツ局所管施設の一部利用制限について"
+            "url": "https://www.pref.aichi.jp/soshiki/shobohoan/kyuukannenntyou-bousaikyouiku.html",
+            "text": "（休館期間延長）新型コロナウイルス感染症の拡大防止に係る防災教育センターの臨時休館について"
         },
         {
             "date": "2020/03/12",
-            "url": "https://www.pref.aichi.jp/soshiki/shobohoan/kyuukannenntyou-bousaikyouiku.html",
-            "text": "（休館期間延長）新型コロナウイルス感染症の拡大防止に係る防災教育センターの臨時休館について"
+            "url": "https://www.pref.aichi.jp/soshiki/sports/encho-kentai-spokan-budokan-korogi.html",
+            "text": "【一部利用制限延長】新型コロナウイルス感染症の拡大防止に係る愛知県スポーツ局所管施設の一部利用制限について"
         },
         {
             "date": "2020/03/12",
