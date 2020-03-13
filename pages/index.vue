@@ -52,6 +52,19 @@
           "
         />
       </v-col>
+      <v-col cols="12" md="6" class="DataCard">
+        <time-bar-chart
+          title="検査実施数"
+          :title-id="'number-of-tested'"
+          :chart-id="'time-bar-chart-inspections'"
+          :chart-data="inspectionsGraph"
+          :date="Data.inspections_summary.date"
+          :unit="'人'"
+          :url="
+            'https://www.pref.aichi.jp//soshiki/kenkotaisaku/novel-coronavirus.html'
+          "
+        />
+      </v-col>
 <!--
       <v-col cols="12" md="6" class="DataCard">
         <time-stacked-bar-chart
@@ -146,10 +159,11 @@ export default {
     // 都営地下鉄の利用者数の推移
     const metroGraph = MetroData
     // 検査実施日別状況
-    const inspectionsGraph = [
-      Data.inspections_summary.data['愛知県内'],
-      Data.inspections_summary.data['その他']
-    ]
+    const inspectionsGraph = formatGraph(Data.inspections_summary.data)
+    //const inspectionsGraph = [
+    //  Data.inspections_summary.data['愛知県内'],
+    //  Data.inspections_summary.data['その他']
+    //]
     const inspectionsItems = [
       '愛知県内発生（疑い例・接触者調査）',
       'その他（チャーター便・クルーズ船）'
