@@ -101,6 +101,9 @@
     <TextCard title="お問い合わせ先">
       本サイトは愛知県の公式サイトではありません<br />
       愛知県へ本サイトに関するお問い合わせされないようお願いいたします。
+
+      twitter:@codeforalone<br />
+      email:codeforalone@gmail.com<br />
     </TextCard>
   </div>
 </template>
