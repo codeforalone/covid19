@@ -2,7 +2,13 @@
   <data-view :title="title" :title-id="titleId" :date="date">
     <template v-slot:button>
       <p class="Graph-Desc">
-        （注）同一の対象者について複数の検体を調査する場合あり
+        {{ $t('（注）同一の対象者について複数の検体を調査する場合あり') }}
+        <br />
+        {{
+          $t(
+            '2/29の値は1月30日～2月29日の値'
+          )
+        }}
       </p>
       <data-selector v-model="dataKind" />
     </template>
@@ -21,6 +27,8 @@
     </template>
   </data-view>
 </template>
+
+<i18n src="./TimeStackedBarChart.i18n.json"></i18n>
 
 <script>
 import DataView from '@/components/DataView.vue'
@@ -81,13 +89,17 @@ export default {
       if (this.dataKind === 'transition') {
         return {
           lText: this.sum(this.pickLastNumber(this.chartData)).toLocaleString(),
-          sText: `${this.labels[this.labels.length - 1]} の合計`,
+          sText: `${this.$t('{date}の検査数', {
+            date: this.labels[this.labels.length - 1]
+          })}`,
           unit: this.unit
         }
       }
       return {
         lText: this.sum(this.cumulativeSum(this.chartData)).toLocaleString(),
-        sText: `${this.labels[this.labels.length - 1]} の全体累計`,
+        sText: `${this.$t('{date}の全体累計', {
+          date: this.labels[this.labels.length - 1]
+        })}`,
         unit: this.unit
       }
     },
@@ -96,10 +108,11 @@ export default {
       if (this.dataKind === 'transition') {
         return {
           labels: this.labels,
+          //日別グラフ
           datasets: this.chartData.map((item, index) => {
             return {
               label: this.items[index],
-              data: item,
+              data: this.non_stuck_bar(item, index),
               backgroundColor: colorArray[index],
               borderWidth: 0
             }
@@ -108,10 +121,11 @@ export default {
       }
       return {
         labels: this.labels,
+        //累積グラフ
         datasets: this.chartData.map((item, index) => {
           return {
             label: this.items[index],
-            data: this.cumulative(item),
+            data: this.cumulative(this.non_stuck_bar(item, index)),
             backgroundColor: colorArray[index],
             borderWidth: 0
           }
@@ -131,28 +145,43 @@ export default {
           displayColors: false,
           callbacks: {
             label: tooltipItem => {
-              const labelText =
-                this.dataKind === 'transition'
-                  ? `${sumArray[tooltipItem.index]}${unit}（都内: ${
-                      data[0][tooltipItem.index]
-                    }/その他: ${data[1][tooltipItem.index]}）`
-                  : `${cumulativeSumArray[tooltipItem.index]}${unit}（都内: ${
-                      cumulativeData[0][tooltipItem.index]
-                    }/その他: ${cumulativeData[1][tooltipItem.index]}）`
-              return labelText
+              const labelTokyo = this.$t('陽性者数(人)')
+              const labelOthers = this.$t('検査件数(件)')
+              const labelArray = [labelTokyo, labelOthers]
+              let casesTotal, cases
+              if (this.dataKind === 'transition') {
+                casesTotal = sumArray[tooltipItem.index].toLocaleString()
+                cases = data[tooltipItem.datasetIndex][
+                  tooltipItem.index
+                ].toLocaleString()
+              } else {
+                casesTotal = cumulativeSumArray[
+                  tooltipItem.index
+                ].toLocaleString()
+                cases = cumulativeData[tooltipItem.datasetIndex][
+                  tooltipItem.index
+                ].toLocaleString()
+              }
+
+              return `${
+                labelArray[tooltipItem.datasetIndex]
+              }: ${cases} ${unit} (${this.$t('検査件数')}: ${casesTotal} ${unit})`
             },
             title(tooltipItem, data) {
-              return data.labels[tooltipItem[0].index].replace(
-                /(\w+)\/(\w+)/,
-                '$1月$2日'
-              )
+              return data.labels[tooltipItem[0].index]
             }
           }
         },
         responsive: true,
         maintainAspectRatio: false,
         legend: {
-          display: true
+          display: true,
+          onHover: e => {
+            e.currentTarget.style.cursor = 'pointer'
+          },
+          onLeave: e => {
+            e.currentTarget.style.cursor = 'default'
+          }
         },
         scales: {
           xAxes: [
@@ -232,6 +261,18 @@ export default {
     }
   },
   methods: {
+    non_stuck_bar(array, index) {
+      if( index == 0 ) {
+          return array
+      }
+
+      const sumArray = []
+      for (let i = 0; i < this.chartData[0].length; i++) {
+        sumArray.push(this.chartData[1][i] - this.chartData[0][i])
+      }
+
+      return sumArray
+    },
     cumulative(array) {
       const cumulativeArray = []
       let patSum = 0
@@ -241,9 +282,11 @@ export default {
       })
       return cumulativeArray
     },
+    //検査実施数
     sum(array) {
       return array.reduce((acc, cur) => {
-        return acc + cur
+        //return acc + cur
+        return cur
       })
     },
     pickLastNumber(chartDataArray) {
@@ -251,6 +294,7 @@ export default {
         return array[array.length - 1]
       })
     },
+    // 累計
     cumulativeSum(chartDataArray) {
       return chartDataArray.map(array => {
         return array.reduce((acc, cur) => {
@@ -258,10 +302,12 @@ export default {
         })
       })
     },
+    // 検査件数合計
     eachArraySum(chartDataArray) {
       const sumArray = []
       for (let i = 0; i < chartDataArray[0].length; i++) {
-        sumArray.push(chartDataArray[0][i] + chartDataArray[1][i])
+        //sumArray.push(chartDataArray[0][i] + chartDataArray[1][i])
+        sumArray.push(chartDataArray[1][i])
       }
       return sumArray
     }
@@ -271,7 +317,8 @@ export default {
 
 <style lang="scss" scoped>
 .Graph-Desc {
-  margin: 10px 0;
+  width: 100%;
+  margin: 0;
   font-size: 12px;
   color: $gray-3;
 }
