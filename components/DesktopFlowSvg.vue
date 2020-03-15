@@ -1,5 +1,11 @@
+<!-- eslint-disable vue/html-indent -->
 <template>
-  <svg viewBox="0 0 1046 1256" xmlns="http://www.w3.org/2000/svg">
+  <svg
+    width="625"
+    height="750"
+    viewBox="0 0 1046 1256"
+    xmlns="http://www.w3.org/2000/svg"
+  >
     <defs>
       <style>
         .a,
@@ -1170,7 +1176,7 @@
       </g>
       <g transform="translate(0 7)">
         <text class="an" transform="translate(913 456)">
-          <tspan x="-84.051" y="0">03-5320-4592</tspan>
+          <tspan x="-84.051" y="0">xx-xxxxx-xxxxx</tspan>
         </text>
         <g transform="translate(800 434)">
           <path class="d" d="M0,0H26V26H0Z" />
@@ -1204,7 +1210,7 @@
         </g>
       </g>
       <text class="an" transform="translate(633 679)">
-        <tspan x="-79.555" y="0">0570-550571</tspan>
+        <tspan x="-79.555" y="0">xxxx-xxxxxxxx</tspan>
       </text>
       <g transform="translate(520 656)">
         <path class="d" d="M0,0H26V26H0Z" />
