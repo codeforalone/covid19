@@ -1,47 +1,52 @@
 <template>
   <div class="SideNavigation">
-    <div class="SideNavigation-HeadingContainer sp-flex">
+    <header class="SideNavigation-HeadingContainer sp-flex">
       <v-icon
         class="SideNavigation-HeadingIcon pc-none"
-        :aria-label="$t('Navi Open')"
+        :aria-label="$t('サイドメニュー項目を開く')"
         @click="openNavi"
       >
         mdi-menu
       </v-icon>
-      <nuxt-link to="/" class="SideNavigation-HeadingLink">
-        <div class="SideNavigation-Logo">
-          <img src="/logo.png" :alt="$t('Aichi')" />
-        </div>
+      <nuxt-link :to="localePath('/')" class="SideNavigation-HeadingLink">
         <h1 class="SideNavigation-Heading">
-          {{ $t('COVID-19') }}<br />{{ $t('Measures site') }}
+          <div class="SideNavigation-Logo">
+            <img src="/logo.png" :alt="$t('愛知県(非公式)')" />
+          </div>
+          {{ $t('新型コロナウイルス感染症') }}<br />{{ $t('対策まとめサイト') }}
         </h1>
       </nuxt-link>
-    </div>
+    </header>
     <v-divider class="SideNavigation-HeadingDivider" />
     <div class="sp-none" :class="{ open: isNaviOpen }">
       <v-icon
         class="SideNavigation-ListContainerIcon pc-none"
-        :aria-label="$t('Navi Close')"
+        :aria-label="$t('サイドメニュー項目を閉じる')"
         @click="closeNavi"
       >
         mdi-close
       </v-icon>
-      <v-list :flat="true">
-        <v-container
-          v-for="(item, i) in items"
-          :key="i"
-          class="SideNavigation-ListItemContainer"
-          @click="closeNavi"
-        >
-          <ListItem :link="item.link" :icon="item.icon" :title="item.title" />
-          <v-divider v-show="item.divider" class="SideNavigation-Divider" />
-        </v-container>
-      </v-list>
-      <div class="SideNavigation-Footer">
+      <nav>
+        <v-list :flat="true">
+          <v-container
+            v-for="(item, i) in items"
+            :key="i"
+            class="SideNavigation-ListItemContainer"
+            @click="closeNavi"
+          >
+            <ListItem :link="item.link" :icon="item.icon" :title="item.title" />
+            <v-divider v-show="item.divider" class="SideNavigation-Divider" />
+          </v-container>
+        </v-list>
+        <div class="SideNavigation-LanguageMenu">
+          <LanguageSelector />
+        </div>
+      </nav>
+      <v-footer class="SideNavigation-Footer">
         <div class="SideNavigation-SocialLinkContainer">
 <!--
           <a
-            href="https://line.me/R/ti/p/%XXXXXXXXXXX"
+            href="https://line.me/xxxxxxxxxxxxx"
             target="_blank"
             rel="noopener"
           >
@@ -57,63 +62,49 @@
           </a>
 <!--
           <a
-            href="https://www.facebook.com/XXXXXXXXXXX"
+            href="https://www.facebook.com/codeforalone"
             target="_blank"
             rel="noopener"
           >
             <img src="/facebook.png" alt="Facebook" />
           </a>
 -->
-          <a href="https://github.com/codeforalone/covid19">
+          <a
+            href="https://github.com/codeforalone/covid19"
+            target="_blank"
+            rel="noopener"
+          >
             <img src="/github.png" alt="GitHub" />
           </a>
         </div>
-        <small class="SideNavigation-Copyright" lang="en">
-          Content on This Site is Licensed Under a
+        <small class="SideNavigation-Copyright">
+          {{ $t('このサイトの内容物は') }}
           <a
             rel="license"
             target="_blank"
-            href="http://creativecommons.org/licenses/by/4.0/"
+            :href="$t('https://creativecommons.org/licenses/by/4.0/deed.ja')"
           >
-            Creative Commons Attribution 4.0 International License </a
-          ><br />
-          2020 codeforalone
+            {{ $t('クリエイティブ・コモンズ 表示 4.0 ライセンス') }}
+          </a>
+          {{ $t('の下に提供されています。') }}
+          <br />
+          2020 Tokyo Metropolitan Government
         </small>
-      </div>
+      </v-footer>
     </div>
   </div>
 </template>
 
-<i18n>
-{
-  "ja": {
-    "Navi Open": "サイドメニュー項目を開く",
-    "Navi Close": "サイドメニュー項目を閉じる",
-    "Aichi": "愛知県(非公式)",
-    "COVID-19": "新型コロナウイルス感染症",
-    "Measures site": "対策まとめサイト",
-    "Aichi Metropolitan Government": "愛知県(非公式)",
-    "Aichi COVID-19 Task Force": "新型コロナウイルス感染症対策本部",
-    "The latest updates": "愛知県内の最新感染動向",
-    "If you have any symptoms": "新型コロナウイルス感染症が心配なときに",
-    "for Families with children": "お子様をお持ちの皆様へ",
-    "for Citizens": "愛知県民の皆様へ",
-    "for Enterprises and Employees": "企業の皆様・はたらく皆様へ",
-    "Official statements from Task Force": "愛知県新型コロナウイルス感染症対策本部会議資料",
-    "Cancelled public events": "愛知県主催等 中止又は延期するイベント等",
-    "Government official website": "愛知県公式ホームページ",
-    "Message from Governor": "知事からのメッセージ",
-    "About us": "当サイトについて"
-  }
-}
-</i18n>
+<i18n src="./SideNavigation.i18n.json"></i18n>
 
 <script>
 import ListItem from '@/components/ListItem'
+import LanguageSelector from '@/components/LanguageSelector.vue'
 
 export default {
   components: {
-    ListItem
+    ListItem,
+    LanguageSelector
   },
   props: {
     isNaviOpen: {
@@ -126,57 +117,53 @@ export default {
       return [
         {
           icon: 'mdi-chart-timeline-variant',
-          title: this.$t('The latest updates'),
-          link: '/'
+          title: this.$t('愛知県内の最新感染動向'),
+          link: this.localePath('/')
         },
         {
           icon: 'covid',
-          title: this.$t('If you have any symptoms'),
-          link: 'https://www.pref.aichi.jp/soshiki/kenkotaisaku/novel-coronavirus.html#soudan',
+          title: this.$t('新型コロナウイルス感染症が心配なときに'),
+          link: 'https://www.pref.aichi.jp//soshiki/kenkotaisaku/novel-coronavirus.html#soudan',
           divider: true
         },
-/*
-        {
-          icon: 'parent',
-          title: this.$t('for Families with children'),
-          link: '/parent'
-        },
-*/
+        //{
+        //  icon: 'parent',
+        //  title: this.$t('お子様をお持ちの皆様へ'),
+        //  link: this.localePath('/parent')
+        //},
         {
           icon: 'mdi-account-multiple',
-          title: this.$t('for Citizens'),
+          title: this.$t('県民の皆様へ'),
           link: 'https://www.pref.aichi.jp//soshiki/kenkotaisaku/novel-coronavirus.html',
           divider: true
         },
-/*
+        //{
+        //  icon: 'mdi-domain',
+        //  title: this.$t('企業の皆様・はたらく皆様へ'),
+        //  link: this.localePath('/worker'),
+        //  divider: true
+        //},
         {
-          icon: 'mdi-domain',
-          title: this.$t('for Enterprises and Employees'),
-          link: '/worker',
-          divider: true
-        },
-*/
-        {
-          title: this.$t('Official statements from Task Force'),
+          title: this.$t('愛知県新型コロナウイルス感染症対策本部会議資料'),
           link:
             'https://www.pref.aichi.jp/soshiki/kenkotaisaku/novel-coronavirus-taisakuhonbu.html'
         },
         {
-          title: this.$t('Cancelled public events'),
-          link:
-            'https://www.pref.aichi.jp/soshiki/master/eventinfo-corona.html'
-        },
-        {
-          title: this.$t('Message from Governor'),
+          title: this.$t('愛知県主催等 中止又は延期するイベント等'),
           link:
             'https://www.pref.aichi.jp/chiji/message/index00.html'
         },
         {
-          title: this.$t('About us'),
-          link: '/about'
+          title: this.$t('知事からのメッセージ'),
+          link:
+            'https://www.pref.aichi.jp/tosei/governor/governor/katsudo/2020/03/03_00.html'
         },
         {
-          title: this.$t('Government official website'),
+          title: this.$t('当サイトについて'),
+          link: this.localePath('/about')
+        },
+        {
+          title: this.$t('愛知県公式ホームページ'),
           link: 'https://www.pref.aichi.jp/',
           divider: true
         }
@@ -207,11 +194,11 @@ export default {
     padding: 1.25em 0 1.25em 1.25em;
     align-items: center;
     @include lessThan($small) {
-      padding: 7px 0 7px 20px;
+      padding: 7px 10px;
     }
   }
   &-HeadingIcon {
-    margin-right: 16px;
+    margin-right: 10px;
   }
   &-HeadingLink {
     @include lessThan($small) {
@@ -221,13 +208,14 @@ export default {
     text-decoration: none;
   }
   &-ListContainerIcon {
+    width: 21px;
     margin: 24px 16px 0;
   }
   &-ListItemContainer {
     padding: 2px 20px;
   }
   &-Logo {
-    margin: 20px 16px 0 0;
+    margin: 5px 16px 15px 0;
     width: 110px;
     @include lessThan($small) {
       margin-top: 0;
@@ -252,17 +240,21 @@ export default {
   &-Divider {
     margin: 12px 0;
   }
+  &-LanguageMenu {
+    padding: 0 20px;
+    background: #fff;
+  }
   &-Footer {
     padding: 20px;
     background-color: $white;
   }
   &-SocialLinkContainer {
     display: flex;
+    & a:not(:last-of-type) {
+      margin-right: 10px;
+    }
     & img {
       width: 30px;
-      &:first-of-type {
-        margin-right: 10px;
-      }
     }
   }
   &-Copyright {
@@ -286,6 +278,11 @@ export default {
     background-color: $white;
     height: 100%;
     overflow-y: scroll;
+  }
+}
+@include lessThan($tiny) {
+  .sp-logo {
+    width: 100px;
   }
 }
 @include largerThan($small) {

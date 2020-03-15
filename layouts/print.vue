@@ -25,7 +25,7 @@
               tile
               color="transparent"
             >
-              <img src="/site-qr.svg" alt="QRコード" />
+              <img src="/site-qr.gif" alt="QRコード" />
             </v-card>
             <v-card class="flex-shrink-0" flat tile color="transparent">
               <p class="PrintMeta-Text">
@@ -77,7 +77,7 @@ export default {
       link: [
         {
           rel: 'canonical',
-          href: `https://stopcovid19.aichi-info.net${this.$route.path}`
+          href: `https://stopcovid19.metro.tokyo.lg.jp${this.$route.path}`
         }
       ]
     }
