@@ -1,7 +1,7 @@
 {
     "newsItems": [
         {
-            "date": "2020/03/15",
+            "date": "2020/03/16",
             "url": "https://www.pref.aichi.jp/soshiki/kenkotaisaku/novel-coronavirus.html",
             "text": "新型コロナウイルス感染症について"
         },
@@ -17,13 +17,13 @@
         },
         {
             "date": "2020/03/13",
-            "url": "https://www.pref.aichi.jp/site/covid19-aichi/nougyoukinyu.html",
-            "text": "新型コロナウィルス感染症で影響を受けた農業者向け農業制度資金"
-        },
-        {
-            "date": "2020/03/13",
             "url": "https://www.pref.aichi.jp/site/covid19-aichi/kaiyoh.html",
             "text": "新型コロナウイルス感染症の拡大防止に係る豊田自動織機海陽ヨットハーバーの一部利用制限について"
+        },
+        {
+            "date": "2020/03/12",
+            "url": "https://www.pref.aichi.jp/soshiki/kenkotaisaku/pressrelease-ncov200312.html",
+            "text": "新型コロナウイルス感染症患者の発生について"
         }
     ]
 }
