@@ -2,3 +2,8 @@
   from = "/*"
   to = "/404.html"
   status = 404
+
+[[redirects]]
+  from = "/"
+  to = "https://codeforalone.github.io/index.html"
+  status = 200
