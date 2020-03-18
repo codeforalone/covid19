@@ -1,5 +1,8 @@
 # 愛知県(非公式) 新型コロナウイルス感染症対策まとめサイト
 
+愛知県の公式サイトが公開されましたので、CLOSEしました。
+https://www.pref.aichi.jp/site/covid19-aichi/
+
 ### 非公式愛知県版について
 
 - 愛知県の公式版がリリースされた場合は終了予定
@@ -50,5 +53,5 @@ $ docker-compose run --rm app yarn install
 
 `staging` ブランチがアップデートされると、自動的に `gh-pages` ブランチにHTML類がbuildされます。そして、ステージングサイト https://stg-covid19-aichi-unoffical.netlify.com/ が更新されます。
 
-`development` ブランチがアップデートされると、自動的に `dev-pages` ブランチにHTML類がbuildされます。そして、開発用サイト https://dev-covid19-aichi-unoffical.netlify.com/が更新されます。
+`development` ブランチがアップデートされると、自動的に `dev-pages` ブランチにHTML類がbuildされます。そして、開発用サイト https://dev-covid19-aichi-unoffical.netlify.com/ が更新されます。
 
